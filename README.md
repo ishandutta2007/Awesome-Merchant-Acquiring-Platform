@@ -76,7 +76,7 @@ Below is a comprehensive list of top open-source payment engines, billing infras
 
 > 🌟 **All projects below are sorted by GitHub Stars_Count (Descending)**. Click on any Stars_Badge to visit the project's stargazers page!
 
-| Project | Category | Stars | Description & Links |
+| Project | Category | Github_Stars | Description & Links |
 | :--- | :--- | :--- | :--- |
 | **[redis](https://github.com/redis/redis)** | `In-Memory Data Store` | <a href="https://github.com/redis/redis/stargazers"><img src="https://img.shields.io/github/stars/redis/redis?style=social&color=white" alt="redis stars"/></a> | Low-latency in-memory data store for velocity counters, session state, and fraud rules. |
 | **[minio](https://github.com/minio/minio)** | `Object Storage` | <a href="https://github.com/minio/minio/stargazers"><img src="https://img.shields.io/github/stars/minio/minio?style=social&color=white" alt="minio stars"/></a> | S3-compatible object storage for settlement files, reconciliation artifacts, and audit logs. |
