@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="1200" height="400">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="50%" stop-color="#1E1B4B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+
+    <!-- Accent Gradient -->
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#818CF8"/>
+      <stop offset="100%" stop-color="#C084FC"/>
+    </linearGradient>
+
+    <!-- Glowing Node Gradient -->
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#38BDF8" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="purpleGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#C084FC" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#C084FC" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Shimmer Filter -->
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <style>
+    .title-text {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 800;
+      font-size: 46px;
+      fill: #FFFFFF;
+    }
+    .subtitle-text {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 500;
+      font-size: 20px;
+      fill: #94A3B8;
+    }
+    .badge-text {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      fill: #E2E8F0;
+    }
+    
+    /* Dynamic Animations */
+    @keyframes pulseParticle {
+      0%, 100% { transform: scale(1); opacity: 0.4; }
+      50% { transform: scale(1.4); opacity: 0.9; }
+    }
+    @keyframes dashMove {
+      0% { stroke-dashoffset: 100; }
+      100% { stroke-dashoffset: 0; }
+    }
+    @keyframes shimmerBar {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(100%); }
+    }
+
+    .node-pulse-1 { animation: pulseParticle 4s infinite ease-in-out; transform-origin: 150px 100px; }
+    .node-pulse-2 { animation: pulseParticle 5s infinite ease-in-out 1s; transform-origin: 1050px 120px; }
+    .node-pulse-3 { animation: pulseParticle 3.5s infinite ease-in-out 0.5s; transform-origin: 1000px 300px; }
+    
+    .flow-line {
+      stroke: url(#accentGrad);
+      stroke-width: 2;
+      stroke-dasharray: 8 6;
+      animation: dashMove 15s linear infinite;
+      opacity: 0.4;
+    }
+  </style>
+
+  <!-- Background Layer -->
+  <rect width="1200" height="400" rx="16" fill="url(#bgGrad)"/>
+  <rect width="1200" height="400" rx="16" fill="none" stroke="#334155" stroke-width="2"/>
+
+  <!-- Dynamic Glowing Lights (Background Aspect) -->
+  <circle cx="150" cy="100" r="180" fill="url(#glow)" class="node-pulse-1"/>
+  <circle cx="1050" cy="120" r="220" fill="url(#purpleGlow)" class="node-pulse-2"/>
+  <circle cx="1000" cy="300" r="150" fill="url(#glow)" class="node-pulse-3"/>
+
+  <!-- Connecting Dynamic Network Lines (Background Aspect) -->
+  <path d="M 100 80 Q 300 200 600 100 T 1100 120" fill="none" class="flow-line"/>
+  <path d="M 50 320 Q 400 220 700 340 T 1150 280" fill="none" class="flow-line"/>
+
+  <!-- Decorative Network Nodes -->
+  <circle cx="150" cy="100" r="6" fill="#38BDF8"/>
+  <circle cx="1050" cy="120" r="6" fill="#C084FC"/>
+  <circle cx="600" cy="100" r="4" fill="#818CF8"/>
+  <circle cx="700" cy="340" r="5" fill="#38BDF8"/>
+
+  <!-- FOREGROUND LAYER: Content Box & Readable Text -->
+  <g filter="url(#shadow)">
+    <!-- Header Accent Bar -->
+    <rect x="80" y="80" width="1040" height="6" rx="3" fill="url(#accentGrad)"/>
+
+    <!-- Main Title -->
+    <text x="80" y="150" class="title-text">Awesome Merchant Acquiring Platform 💳</text>
+
+    <!-- Subtitle -->
+    <text x="80" y="195" class="subtitle-text">Curated SaaS Platforms, Payment Orchestration &amp; Open-Source Payment Infrastructure</text>
+  </g>
+
+  <!-- Feature Pill Badges (Foreground) -->
+  <g transform="translate(80, 245)">
+    <!-- Pill 1 -->
+    <rect x="0" y="0" width="220" height="42" rx="21" fill="#1E293B" stroke="#38BDF8" stroke-width="1.5"/>
+    <text x="110" y="26" class="badge-text" text-anchor="middle">🏦 Acquiring &amp; Processing</text>
+
+    <!-- Pill 2 -->
+    <rect x="235" y="0" width="230" height="42" rx="21" fill="#1E293B" stroke="#818CF8" stroke-width="1.5"/>
+    <text x="350" y="26" class="badge-text" text-anchor="middle">⚡ Payment Orchestration</text>
+
+    <!-- Pill 3 -->
+    <rect x="480" y="0" width="210" height="42" rx="21" fill="#1E293B" stroke="#C084FC" stroke-width="1.5"/>
+    <text x="585" y="26" class="badge-text" text-anchor="middle">🔓 Open-Source Engines</text>
+
+    <!-- Pill 4 -->
+    <rect x="705" y="0" width="220" height="42" rx="21" fill="#1E293B" stroke="#34D399" stroke-width="1.5"/>
+    <text x="815" y="26" class="badge-text" text-anchor="middle">🛡️ Fraud, Risk &amp; Ledger</text>
+  </g>
+
+  <!-- Bottom Accent Line -->
+  <rect x="80" y="340" width="1040" height="2" fill="#334155"/>
+</svg>
