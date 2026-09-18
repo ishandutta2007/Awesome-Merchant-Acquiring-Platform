@@ -74,7 +74,7 @@ This ecosystem guide covers end-to-end payment workflows: merchant onboarding, c
 
 Below is a comprehensive list of top open-source payment engines, billing infrastructure, ledgers, e-commerce checkouts, and security tools.
 
-> 🌟 **All projects below are sorted by GitHub Stars_Count (Descending)**. Click on any Stars_Badge to visit the project's stargazers page!
+> 🌟 **All projects below are sorted by GitHub_Stars_Count (Descending)**. Click on any Stars_Badge to visit the project's stargazers page!
 
 | Project | Category | Github_Stars | Description & Links |
 | :--- | :--- | :--- | :--- |
